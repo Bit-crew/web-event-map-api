@@ -1,0 +1,27 @@
+{
+  "name": "web-event-map-api",
+  "version": "1.0.0",
+  "description": "web event #1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bit-crew/web-event-map-api.git"
+  },
+  "keywords": [
+    "bit",
+    "crew"
+  ],
+  "author": "proXDhiya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bit-crew/web-event-map-api/issues"
+  },
+  "homepage": "https://github.com/Bit-crew/web-event-map-api#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
