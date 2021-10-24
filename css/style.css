@@ -38,6 +38,10 @@ body {
     background-repeat: no-repeat;
 }
 
+.input-section > nav {
+    margin-top: 3%;
+}
+
 .input-section > nav > h2 {
     color: #fff;
     font-weight: var(--font-weight-medium);
@@ -71,7 +75,7 @@ body {
 }
 
 .status {
-    height: 170px;
+    height: 150px;
     width: 1200px;
     position: fixed;
     top: 35%;
@@ -83,6 +87,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
+    z-index: 100;
 }
 
 .status div {
@@ -97,7 +102,7 @@ body {
     font-weight: var(--font-weight-bold);
     color: var(--Dark-Gray);
     margin-left: 30px;
-    margin-top: 30px;
+    margin-top: 20px;
     text-transform: uppercase;
     font-size: 90%;
 }
@@ -106,5 +111,11 @@ body {
     font-weight: var(--font-weight-bold);
     font-size: 120%;
     margin-left: 30px;
-    margin-top: 20px;
+    margin-top: 15px;
+}
+
+#mapid {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
 }
