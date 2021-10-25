@@ -25,7 +25,7 @@ function handleData({ ip, location, isp }) {
 	// Write the data in the bord
 	Ip.innerText = ip;
 	Location.innerText = `${location.city}, ${location.country}`;
-	Timezone.innerText = `UTC${location.timezone}`;
+	Timezone.innerText = `GMT${location.timezone}`;
 	Utc.innerText = isp;
 
 	// set map vu
