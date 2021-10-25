@@ -62,7 +62,7 @@ function resetBord() {
 
 
 // run and fatch auto for first time user 
-// fetchIp();
+fetchIp();
 
 
 // run and fetch for the user search
