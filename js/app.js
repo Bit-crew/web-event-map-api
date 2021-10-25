@@ -22,7 +22,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 // handle data from fetch
 function handleData({ ip, location, isp }) {
-	// Write the data in the dashbord
+	// Write the data in the bord
 	Ip.innerText = ip;
 	Location.innerText = `${location.city}, ${location.country}`;
 	Timezone.innerText = `UTC${location.Timezone}`;
@@ -33,7 +33,7 @@ function handleData({ ip, location, isp }) {
 
 	// set map mark
 	var marker = L.marker([location.lat, location.lng]).addTo(mymap);
-	marker.bindPopup(`<b>Hey Look, Its You!</b><br><b>Lat:</b> ${location.lat}, <b>Lng:</b> ${location.lng}.`).openPopup();
+	marker.bindPopup(`<b>Location</b><br><b>Lat:</b> ${location.lat}, <b>Lng:</b> ${location.lng}.`).openPopup();
 }
 
 
@@ -52,5 +52,27 @@ function fetchIp(ip = '') {
 }
 
 
-// run and load fatch
+// reset bord
+function resetBord() {
+	Ip.innerText = 'Nan';
+	Location.innerText = 'Nan';
+	Timezone.innerText = 'Nan';
+	Utc.innerText = 'Nan';
+}
+
+
+// run and fatch auto for first time user 
 fetchIp();
+
+
+// run and fetch for the user search
+const searchInput = document.querySelector('.input-section--form > input[type="text"]');
+const searchBtn = document.getElementById('submit-btn');
+searchBtn.addEventListener(
+	'click', function() {
+		if(searchInput.value) {
+			resetBord();
+			fetchIp(searchInput.value);
+		}
+	}
+);
