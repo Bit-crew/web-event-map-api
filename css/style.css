@@ -72,6 +72,11 @@ body {
     background-color: #000;
     border: none;
     cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+#submit-btn:hover {
+    background-color: var(--Very-Dark-Gray);
 }
 
 .status {
