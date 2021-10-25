@@ -25,7 +25,7 @@ function handleData({ ip, location, isp }) {
 	// Write the data in the bord
 	Ip.innerText = ip;
 	Location.innerText = `${location.city}, ${location.country}`;
-	Timezone.innerText = `UTC${location.Timezone}`;
+	Timezone.innerText = `UTC${location.timezone}`;
 	Utc.innerText = isp;
 
 	// set map vu
@@ -72,6 +72,8 @@ searchBtn.addEventListener(
 	'click', function() {
 		if(searchInput.value) {
 			resetBord();
+			if(searchInput.value === 'www.')
+
 			fetchIp(searchInput.value);
 		}
 	}
