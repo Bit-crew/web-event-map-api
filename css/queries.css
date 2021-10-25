@@ -1,5 +1,5 @@
 @media (max-width: 1200px) {
-    :root { --font-size: 16px; }
+    :root { --font-size: 15px; }
 
     .input-section--form { width: 450px; }
 
@@ -14,21 +14,20 @@
 }
 
 @media (max-width: 850px) {
-    :root { --font-size: 12px; }
-
-    body { grid-template-rows: 40% 60%; }
+    :root { --font-size: 11px; }
 
     .input-section--form {
-        width: 280px;
+        width: 260px;
+        height: 30px;
         grid-template-columns: 80% 20%;
     }
 
     .status {
-        width: 280px;
-        height: 240px;
+        width: 260px;
+        height: 220px;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
-        top: 40%;
+        top: 35%;
     }
 
     .status div {
