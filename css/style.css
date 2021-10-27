@@ -69,11 +69,13 @@ body {
     grid-template-rows: 1fr;
 }
 
+
 .input-section--form input {
     font-size: 100%;
     padding-left: 15px;
     border: none;
 }
+
 
 #submit-btn {
     background-color: #000;
@@ -82,9 +84,11 @@ body {
     transition: background .2s ease-in-out;
 }
 
+
 #submit-btn:hover {
     background-color: var(--Very-Dark-Gray);
 }
+
 
 .status {
     height: 150px;
@@ -106,15 +110,18 @@ body {
     z-index: 100;
 }
 
+
 .status div {
     border-right: .5px solid var(--Dark-Gray);
 }
+
 
 .status div:last-child {
     border: none;
 }
 
-.status div > h4 {
+
+.status div h4 {
     font-weight: var(--font-weight-bold);
     color: var(--Dark-Gray);
     margin-left: 30px;
@@ -123,12 +130,14 @@ body {
     font-size: 90%;
 }
 
-.status div > h3 {
+
+.status div h3 {
     font-weight: var(--font-weight-bold);
     font-size: 120%;
     margin-left: 30px;
     margin-top: 15px;
 }
+
 
 #mapid {
     height: 100%;

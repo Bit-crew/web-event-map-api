@@ -29,7 +29,7 @@ function handleData({ ip, location, isp }) {
 	Utc.innerText = isp;
 
 	// set map vu
-	mymap.setView([location.lat, location.lng], 14);
+	myMap.setView([location.lat, location.lng], 14);
 
 	// set map mark
 	var marker = L.marker([location.lat, location.lng]).addTo(myMap);
@@ -39,16 +39,9 @@ function handleData({ ip, location, isp }) {
 
 // fetch data function
 function fetchIp(ip = '') {
-  if (ip) {
     fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_fz3e43ym5SC8fMxsDzwHC6PxBLzab&ipAddress=${ip}`)
       .then(response => response.json())
       .then(handleData);
-  }
-  else {
-		fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_fz3e43ym5SC8fMxsDzwHC6PxBLzab&ipAddress`)
-      .then(response => response.json())
-      .then(handleData);
-	}
 }
 
 
