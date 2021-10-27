@@ -6,7 +6,7 @@ const Utc = document.getElementById('utc');
 
 
 // create map
-var mymap = L.map('mapid');
+let myMap = L.map('mapid');
 
 
 // create tile layer for map
@@ -17,7 +17,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     tileSize: 512,
     zoomOffset: -1,
     accessToken: 'pk.eyJ1IjoicHJveGRoaXlhIiwiYSI6ImNrdjVpdmNpMTFrdjQydW92b3RleTZmcXQifQ.hIKGGvA2lGBDzf-bRqk3_Q'
-}).addTo(mymap);
+}).addTo(myMap);
 
 
 // handle data from fetch
@@ -32,7 +32,7 @@ function handleData({ ip, location, isp }) {
 	mymap.setView([location.lat, location.lng], 14);
 
 	// set map mark
-	var marker = L.marker([location.lat, location.lng]).addTo(mymap);
+	var marker = L.marker([location.lat, location.lng]).addTo(myMap);
 	marker.bindPopup(`<b>Location</b><br><b>Lat:</b> ${location.lat}, <b>Lng:</b> ${location.lng}.`).openPopup();
 }
 
