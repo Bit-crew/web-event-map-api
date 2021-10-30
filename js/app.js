@@ -59,7 +59,7 @@ fetchIp();
 
 
 // run and fetch for the user search
-const searchInput = document.querySelector('.input-section--form > input[type="text"]');
+const searchInput = document.querySelector('.input-section--form input');
 const searchBtn = document.getElementById('submit-btn');
 searchBtn.addEventListener(
 	'click', function() {
