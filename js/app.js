@@ -6,7 +6,7 @@ const Utc = document.getElementById('utc');
 
 
 // create map
-var mymap = L.map('mapid');
+let myMap = L.map('mapid');
 
 
 // create tile layer for map
@@ -17,7 +17,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     tileSize: 512,
     zoomOffset: -1,
     accessToken: 'pk.eyJ1IjoicHJveGRoaXlhIiwiYSI6ImNrdjVpdmNpMTFrdjQydW92b3RleTZmcXQifQ.hIKGGvA2lGBDzf-bRqk3_Q'
-}).addTo(mymap);
+}).addTo(myMap);
 
 
 // handle data from fetch
@@ -29,26 +29,19 @@ function handleData({ ip, location, isp }) {
 	Utc.innerText = isp;
 
 	// set map vu
-	mymap.setView([location.lat, location.lng], 14);
+	myMap.setView([location.lat, location.lng], 14);
 
 	// set map mark
-	var marker = L.marker([location.lat, location.lng]).addTo(mymap);
+	var marker = L.marker([location.lat, location.lng]).addTo(myMap);
 	marker.bindPopup(`<b>Location</b><br><b>Lat:</b> ${location.lat}, <b>Lng:</b> ${location.lng}.`).openPopup();
 }
 
 
 // fetch data function
 function fetchIp(ip = '') {
-  if (ip) {
     fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_fz3e43ym5SC8fMxsDzwHC6PxBLzab&ipAddress=${ip}`)
       .then(response => response.json())
       .then(handleData);
-  }
-  else {
-		fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_fz3e43ym5SC8fMxsDzwHC6PxBLzab&ipAddress`)
-      .then(response => response.json())
-      .then(handleData);
-	}
 }
 
 
@@ -66,7 +59,7 @@ fetchIp();
 
 
 // run and fetch for the user search
-const searchInput = document.querySelector('.input-section--form > input[type="text"]');
+const searchInput = document.querySelector('.input-section--form input');
 const searchBtn = document.getElementById('submit-btn');
 searchBtn.addEventListener(
 	'click', function() {

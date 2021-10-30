@@ -13,19 +13,23 @@
     --font-weight-bold: 700;
 }
 
-:is(*, *::after, *::before) {
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+
 body {
     width: 100vw;
     height: 100vh;
+
     font-family: var(--font-family);
     font-size: var(--font-size);
     font-weight: var(--font-weight-medium);
     color: var(--Very-Dark-Gray);
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 35% 65%;
@@ -38,11 +42,13 @@ body {
     background-repeat: no-repeat;
 }
 
-.input-section > nav {
+
+.input-section nav {
     margin-top: 3%;
 }
 
-.input-section > nav > h2 {
+
+.input-section nav h2 {
     color: #fff;
     font-weight: var(--font-weight-medium);
     font-size: 180%;
@@ -50,23 +56,26 @@ body {
     margin-top: 20px;
 }
 
+
 .input-section--form {
     width: 550px;
     height: 50px;
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
     border-radius: 10px;
     overflow: hidden;
-    margin-top: 20px;
+    
     display: grid;
     grid-template-columns: 90% 10%;
     grid-template-rows: 1fr;
 }
 
-.input-section--form > input[type="text"] {
+
+.input-section--form input {
     font-size: 100%;
     padding-left: 15px;
     border: none;
 }
+
 
 #submit-btn {
     background-color: #000;
@@ -75,35 +84,44 @@ body {
     transition: background .2s ease-in-out;
 }
 
+
 #submit-btn:hover {
     background-color: var(--Very-Dark-Gray);
 }
 
+
 .status {
     height: 150px;
     width: 1200px;
+
     position: fixed;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     background-color: #fff;
     border-radius: 15px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
+
     z-index: 100;
 }
+
 
 .status div {
     border-right: .5px solid var(--Dark-Gray);
 }
 
+
 .status div:last-child {
     border: none;
 }
 
-.status div > h4 {
+
+.status div h4 {
     font-weight: var(--font-weight-bold);
     color: var(--Dark-Gray);
     margin-left: 30px;
@@ -112,12 +130,14 @@ body {
     font-size: 90%;
 }
 
-.status div > h3 {
+
+.status div h3 {
     font-weight: var(--font-weight-bold);
     font-size: 120%;
     margin-left: 30px;
     margin-top: 15px;
 }
+
 
 #mapid {
     height: 100%;
